@@ -55,13 +55,13 @@ O instrutor está trabalhando no projeto Fokus, que envolve alterar o texto exib
 
 Ele começa analisando o design no Figma e identificando os textos que precisam ser alterados.
 
-No código, o instrutor encontra a tag //<h1> que contém o texto a ser modificado e cria uma variável para referenciar esse elemento.
+No código, o instrutor encontra a tag "<h1>" que contém o texto a ser modificado e cria uma variável para referenciar esse elemento.
 
-As alterações de texto serão feitas quando houver eventos de clique nos botões do temporizador. O instrutor usa um bloco switch para verificar o contexto atual e atualizar o texto da tag //<h1> usando o método innerHTML.
+As alterações de texto serão feitas quando houver eventos de clique nos botões do temporizador. O instrutor usa um bloco switch para verificar o contexto atual e atualizar o texto da tag "<h1>" usando o método innerHTML.
 
 Para o contexto de "foco", o texto exibido é "Otimize sua produtividade, mergulhe no que importa".
 
-Nos contextos de "descanso curto" e "descanso longo", o instrutor adiciona tags //<strong> para destacar partes do texto.
+Nos contextos de "descanso curto" e "descanso longo", o instrutor adiciona tags "<strong>" para destacar partes do texto.
 
 O instrutor explica que o método innerHTML pode ser usado não apenas para alterar o texto, mas também para inserir HTML formatado.
 
