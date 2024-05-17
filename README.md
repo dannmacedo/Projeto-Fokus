@@ -32,7 +32,7 @@ Aqui está um resumo da aula sobre manipulação de elementos no DOM:3
 
 Nesta aula, o instrutor Luan Alves ensinou como alterar imagens na página usando JavaScript. Ele começou mostrando os layouts de tela no Figma, onde existem três imagens diferentes: uma verde de uma mulher mergulhando, uma azul de outra mulher mergulhando, e uma roxa de um homem visto de costas.
 
-O instrutor então mostrou como referenciar a tag <img> no HTML usando o método document.querySelector() e criar uma variável chamada banner. Em seguida, ele explicou como alterar a imagem dentro de eventos de clique usando o método setAttribute() para mudar o atributo src da tag <img>.
+O instrutor então mostrou como referenciar a tag < i m g > no HTML usando o método document.querySelector() e criar uma variável chamada banner. Em seguida, ele explicou como alterar a imagem dentro de eventos de clique usando o método setAttribute() para mudar o atributo src da tag <i m g>.
 
 Quando o botão "Foco" é clicado, a imagem é alterada para a verde. Quando os botões "Descanso curto" e "Descanso longo" são clicados, a imagem é alterada para a azul. O instrutor também mencionou que os addEventListener() estão começando a ter códigos repetidos e que isso será refatorado na próxima aula.
 
@@ -55,13 +55,13 @@ O instrutor está trabalhando no projeto Fokus, que envolve alterar o texto exib
 
 Ele começa analisando o design no Figma e identificando os textos que precisam ser alterados.
 
-No código, o instrutor encontra a tag "<h1>" <que contém o texto a ser modificado e cria uma variável para referenciar esse elemento.
+No código, o instrutor encontra a tag "< h 1 >" que contém o texto a ser modificado e cria uma variável para referenciar esse elemento.
 
-As alterações de texto serão feitas quando houver eventos de clique nos botões do temporizador. O instrutor usa um bloco switch para verificar o contexto atual e atualizar o texto da tag "<h1>" <usando o método innerHTML.
+As alterações de texto serão feitas quando houver eventos de clique nos botões do temporizador. O instrutor usa um bloco switch para verificar o contexto atual e atualizar o texto da tag "< h 1 >" usando o método innerHTML.
 
 Para o contexto de "foco", o texto exibido é "Otimize sua produtividade, mergulhe no que importa".
 
-Nos contextos de "descanso curto" e "descanso longo", o instrutor adiciona tags "<strong>" <para destacar partes do texto.
+Nos contextos de "descanso curto" e "descanso longo", o instrutor adiciona tags "< s t r o n g >" para destacar partes do texto.
 
 O instrutor explica que o método innerHTML pode ser usado não apenas para alterar o texto, mas também para inserir HTML formatado.
 
