@@ -112,7 +112,7 @@ document.addEventListener('FocoFinalizado', () => {
         liTarefaSelecionada.classList.add('app__section-task-list-item-complete')
         liTarefaSelecionada.querySelector('button').setAttribute('disabled', 'disabled')
         tarefaSelecionada.completa = true
-        atualizarTarefas()
+        atualizarTarefas() 
     }
 })
 
