@@ -150,3 +150,78 @@ Aula 12
 Nesta aula, o instrutor discutiu sobre a formatação do tempo exibido na tela do projeto Fokus. Inicialmente, o temporizador exibia o número "1.500", que correspondia a 25 minutos. O objetivo foi resolver esse problema utilizando código em JavaScript. O instrutor mostrou como utilizar o objeto "Date" do JavaScript para formatar o tempo e como ajustar os valores dos temporizadores de acordo com o contexto. Além disso, foram feitos ajustes nos EventListeners de cada temporizador para garantir que os valores fossem atualizados corretamente. Por fim, o instrutor mencionou um último ajuste a ser feito, que foi descomentar o código responsável por reproduzir um áudio quando o tempo é finalizado.
 
 #AprendiNaAlura @luanalvesdev 
+
+
+parte 2
+
+Aula1
+
+Nesta aula, o instrutor apresentou o projeto base que será utilizado ao longo do curso, explicando a estrutura de pastas e arquivos do projeto. Ele mencionou a extensão do VS Code chamada Live Server, que será utilizada para rodar o projeto em tempo real. O objetivo principal foi monitorar o clique no botão "Adicionar nova tarefa" e alternar a exibição do formulário de adicionar tarefa. Foi explicado como encontrar o botão no HTML do projeto, utilizando o método querySelector() e a classe app__button--add-task. Em seguida, o instrutor adicionou um evento de clique ao botão utilizando o método addEventListener() e explicou como utilizar o método classList.toggle() para alternar a classe hidden do formulário de adicionar tarefa. Por fim, o instrutor mostrou o formulário no HTML do projeto, utilizando a classe app__form-add-task e a classe hidden para escondê-lo. Essa funcionalidade é importante para permitir a interação do usuário com o projeto e será a base para o desenvolvimento das demais funcionalidades ao longo do curso.
+
+Aula2
+
+Nesta aula, aprendemos a interagir com um formulário em uma aplicação web. O instrutor mostrou como monitorar o envio do formulário, obter o valor digitado em um campo de texto (textarea) e criar uma lista de tarefas a partir desse valor. Além disso, ele explicou como armazenar essa lista de tarefas no armazenamento local do navegador usando o localStorage. Foram demonstrados o uso dos métodos preventDefault() e setItem() para evitar o comportamento padrão de envio do formulário e para guardar a lista de tarefas no localStorage, respectivamente. Também foi mostrado como verificar se os dados foram corretamente armazenados no localStorage usando as ferramentas de desenvolvedor do navegador.
+
+Aula3
+
+Nesta aula, aprendemos sobre a limitação da API do local storage em armazenar objetos complexos, como arrays, devido ao fato de que ela só consegue lidar com strings. Para resolver esse problema, o instrutor introduziu a API JSON e seus métodos stringify() e parse(), que permitem transformar arrays em strings e vice-versa, possibilitando o armazenamento adequado no local storage. Também vimos como utilizar esses métodos para armazenar e recuperar dados do local storage, garantindo que as informações sejam salvas corretamente.
+
+Aula4
+
+Nesta aula, o instrutor ensina como criar uma tarefa utilizando JavaScript. Ele começa mostrando a estrutura de uma tarefa em HTML, que inclui uma lista, um ícone, um parágrafo e um botão com uma imagem. Em seguida, ele explica como criar uma função em JavaScript que recebe uma tarefa como parâmetro e retorna o HTML correspondente a essa tarefa. O instrutor destaca que o foco é o JavaScript, não o HTML e CSS, e que o objetivo é gerar o HTML dinamicamente. Ao final, ele menciona que o próximo passo é testar as linhas de código escritas, verificando se há uma lista de tarefas no localStorage e, se houver, recuperando-a e criando automaticamente as tarefas correspondentes. Este trecho do vídeo é útil para quem está aprendendo a desenvolver aplicações web utilizando JavaScript e deseja aprender como criar elementos HTML dinamicamente com base em dados fornecidos.
+
+Aula5
+
+Nesta aula, aprendemos a ler tarefas gravadas no localStorage. Primeiramente, verificamos se a lista de tarefas existe no localStorage utilizando o método localStorage.getItem() com a chave "tarefas". Em seguida, utilizamos o método JSON.parse() para converter a string retornada em um objeto JavaScript, que é um array contendo a lista de tarefas. Caso o retorno seja nulo, atribuímos um array vazio à variável tarefas utilizando o operador ||.
+
+Depois de obter a lista de tarefas do localStorage, mostramos como percorrê-la utilizando o método forEach(). Para cada tarefa, chamamos a função criarElementoTarefa(), que retorna o elemento HTML correspondente. Esse elemento é então adicionado à lista de tarefas no DOM.
+
+O instrutor também ressaltou a importância de separar as responsabilidades das funções, onde a função criarElementoTarefa() é responsável apenas por criar o elemento HTML e a função que a chama é responsável por decidir o que fazer com esse elemento. Ao recarregar a página, as tarefas cadastradas devem aparecer corretamente na lista. No entanto, o instrutor mencionou que ainda há algo errado com a configuração do elemento e sugeriu a depuração para identificar o problema.
+
+Aula6
+
+Nesta aula, o instrutor abordou a correção do estilo da lista de tarefas, a remoção de elementos desnecessários, a adição de classes CSS aos elementos e a adição de uma nova tarefa à lista. Ele mostrou como resolver problemas de estilo e adicionar funcionalidades, como criar um elemento para a nova tarefa e adicioná-lo à lista, limpar o campo de texto do formulário e ocultar o formulário após adicionar a tarefa. O instrutor também destacou a importância dessas etapas no desenvolvimento da aplicação e mencionou que ainda há muito a ser feito.
+
+Aula7
+
+Nesta aula, o instrutor abordou a funcionalidade de edição de tarefas na aplicação Fokus. Ele mostrou como criar um botão de edição utilizando o método document.createElement('button') e como manipular o evento de clique desse botão utilizando a propriedade onclick. Além disso, ele utilizou a função prompt() para exibir uma caixa de diálogo onde o usuário pode informar o novo nome da tarefa. O valor digitado pelo usuário é armazenado em uma variável e utilizado para atualizar o texto da tarefa no DOM. No entanto, o instrutor ressaltou que essa atualização é apenas no DOM e não no localStorage(), e que isso será abordado no próximo vídeo.
+
+Aula8
+
+Nesta aula, o instrutor abordou a necessidade de atualizar o localStorage() quando o usuário editar uma tarefa já criada. Ele mostrou o código atual, onde a atualização do localStorage é feita dentro do evento onclick do botão, mas apontou que essa abordagem pode se tornar frágil no futuro. Para resolver esse problema, o instrutor propôs uma nova estratégia, criando uma função chamada atualizarTarefas() que é responsável por atualizar o localStorage. Essa função encapsula a lógica de atualização do localStorage, tornando o código mais organizado e menos suscetível a futuras alterações. Além disso, o instrutor também atualizou o texto da tarefa no objeto que representa a tarefa, para refletir a nova descrição. No final, ele identificou um bug e mencionou que será abordado em um próximo vídeo.
+
+Aula9
+
+Nesta aula, o instrutor abordou a correção de bugs e a aplicação de técnicas de debugging no código. Ele explicou a utilização do console.log() para exibir mensagens no navegador, além de mostrar como utilizar o prompt para interagir com o usuário e obter informações. Também foi demonstrado o uso da estrutura condicional if para verificar se uma variável possui um valor válido antes de executar determinadas ações. O instrutor ressaltou a importância das ferramentas de debugging para identificar e solucionar problemas no código, destacando o console.log() e o debugger como ferramentas úteis no arsenal dos alunos.
+
+Aula10
+
+Nesta aula, o instrutor abordou a manipulação de elementos HTML em uma aplicação chamada Fokus. Ele explicou como selecionar uma tarefa ao clicar nela, atualizando a descrição da tarefa em andamento e adicionando uma classe específica ao item clicado. O instrutor mostrou o código no VS Code, destacou a tag de parágrafo onde a descrição da tarefa deve ser preenchida e explicou como selecioná-la utilizando um seletor CSS. Além disso, ele demonstrou como adicionar um evento de clique nas tarefas e como adicionar uma classe para indicar que a tarefa está ativa. No entanto, ele percebeu que todas as tarefas estavam com a classe ativa ao mesmo tempo e mencionou que no próximo vídeo irá mostrar como refinar o método para garantir que apenas uma única tarefa tenha a classe ativa por vez.
+
+Aula11
+
+Neste trecho do vídeo, o instrutor aborda a estratégia de garantir que apenas uma única tarefa tenha a classe ativa. Ele explica a diferença entre os métodos querySelectorAll e querySelector e demonstra como utilizar o querySelectorAll para selecionar e iterar sobre os elementos que possuem a classe ativa. O instrutor também adiciona a funcionalidade de deselecionar a tarefa selecionada e utiliza a técnica de "Early Return" para interromper a execução do código quando necessário.
+
+Aula12
+
+Nesta aula, o instrutor está explicando como adicionar funcionalidades ao código de um projeto chamado "Fokus". Ele começa explicando que o código possui uma função chamada "contagemRegressiva" que verifica se o tempo decorrido em segundos é menor ou igual a zero. Em seguida, ele menciona que o tempo decorrido se refere ao tempo que está sendo contado pelo timer do projeto, que é configurado para 30 segundos. Quando o tempo chega a zero, o código executa um trecho que emite um alerta, toca um som e zera o timer.
+
+O instrutor explica que o objetivo é adicionar um evento que seja disparado quando o timer chegar a zero, de forma que outras partes da aplicação possam reagir a esse evento. Para isso, ele mostra que no arquivo "script.js" é possível verificar qual é o valor do atributo "data-contexto" do elemento HTML, que indica se o foco está ativo ou não. Se o valor desse atributo for "foco", significa que a tarefa está sendo executada e, nesse caso, o código cria um evento customizado chamado "FocoFinalizado" e o dispara usando a função "dispatchEvent" do objeto "document".
+
+O instrutor ressalta que outras partes da aplicação podem ouvir e reagir a esse evento, e que no próximo vídeo será mostrado como tratar esse evento no arquivo "script-crud" para indicar que a tarefa foi finalizada.
+
+Aula13
+
+Claro! Nesta aula, o instrutor está explicando como adicionar funcionalidades ao evento customizado "FocoFinalizado" no código JavaScript. Ele mostra como adicionar um event listener para esse evento no objeto "document" e verifica se existe uma tarefa selecionada e um elemento "li" da tarefa selecionada. Caso existam, ele remove a classe "app__section-task-list-item-active" desse elemento "li" e adiciona a classe "app__section-task-list-item-complete". Além disso, ele desabilita o botão da tarefa selecionada usando o método "setAttribute" com o atributo "disabled". O instrutor também menciona a importância de fazer um "double check" para garantir que o elemento "li" da tarefa selecionada não seja nulo. Essa implementação permite que, ao finalizar a contagem regressiva de uma tarefa, a classe e o estado do botão sejam atualizados corretamente. Por fim, o instrutor menciona que o próximo passo será lidar com a persistência do estado de tarefa concluída dentro do localStorage.
+
+Aula14
+
+Nesta aula, o instrutor abordou a necessidade de atualizar o local storage da aplicação para que o estado das tarefas completadas seja persistido mesmo após a recarga da página. Ele mostrou o código onde é adicionado um event listener para o evento "FocoFinalizado" e explicou como verificar se existe uma tarefa selecionada, remover a classe que indica que o item está ativo, adicionar a classe que indica que o item está completo, desabilitar o botão dentro do item e adicionar a propriedade "completa" à tarefa selecionada com o valor "true". Além disso, ele tratou o clique em um item de tarefa, adicionando condições para verificar se a tarefa já está completa e para tratar o caso em que a tarefa não está completa. O instrutor ressaltou que essas modificações são suficientes para persistir a informação de tarefa completa no local storage e recuperá-la corretamente ao recarregar a página. Ele finalizou mencionando que esse foi o último bug corrigido no curso, mas que ainda há mais coisas a serem desenvolvidas.
+
+Aula15
+
+Nesta aula, o instrutor discute a implementação de um menu de contexto ao lado da lista de tarefas na interface do aplicativo Fokus. Esse menu oferece duas opções: limpar as tarefas concluídas ou limpar todas as tarefas. O instrutor mostra o código HTML e JavaScript necessários para implementar a opção de limpar tarefas concluídas. Ele explica como selecionar o botão correspondente no arquivo index.html usando o id do elemento e como adicionar um evento onclick a esse botão. Dentro da função onclick, ele utiliza o método querySelectorAll para selecionar todos os elementos que possuem a classe indicando que a tarefa está completa, e em seguida, utiliza o método forEach para iterar sobre esses elementos e removê-los do DOM usando o método remove. Além disso, ele também mostra como atualizar a lista de tarefas na local storage, filtrando apenas as tarefas que não estão completas. O instrutor menciona um erro na linha 122 do código, onde ele tenta fazer um assignment de uma constante, e explica que é necessário alterar a declaração da lista de tarefas de const para let, pois ela precisa ser mutável. Por fim, ele testa a funcionalidade no navegador e verifica que as tarefas concluídas são removidas tanto do DOM quanto da local storage. O instrutor menciona que o próximo passo é implementar o método para remover todas as tarefas, concluídas ou não.
+
+Aula16
+
+Nesta aula, aprendemos a implementar a funcionalidade de remover todos os itens em uma aplicação chamada Fokus. Para isso, foi criada uma constante chamada "removerTarefas" e associada à função que estava anteriormente dentro do "onclick" do botão de remover itens concluídos. Foi adicionado um parâmetro na função "removerTarefas" chamado "somenteCompletas" para remover apenas os itens completos ou todos os itens, dependendo do valor do parâmetro. Foi feito um filtro condicional na lista de tarefas para remover apenas as tarefas completas ou atribuir um array vazio à lista de tarefas, removendo todas as tarefas. Por fim, foi encontrado o botão de remover todas as tarefas no arquivo "index.html" e foi atribuída a função "removerTarefas" ao clique desse botão, passando o valor "false" para o parâmetro "somenteCompletas". Com essa implementação, a aplicação Fokus ficou mais robusta, permitindo a remoção de todos os itens ou apenas dos itens completos.
